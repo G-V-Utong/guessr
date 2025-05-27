@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessr - The Country Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Guessr</h1>
+        <div id="start-screen">
+            <h2>Welcome to Guessr!</h2>
+            <p>Listen to the cities and guess the country in your mind. Watch the timer and see the answer!</p>
+            <button onclick="startGame('easy')">Easy</button>
+            <button onclick="startGame('medium')">Medium</button>
+            <button onclick="startGame('hard')">Hard</button>
+        </div>
+        <div id="game-screen" style="display: none;">
+            <div class="score-round">
+                <p>Score: <span id="score">0</span></p>
+                <p>Round: <span id="round">1</span>/20</p>
+            </div>
+            <div class="timer-container">
+                <svg class="timer" width="100" height="100">
+                    <circle class="timer-bg" cx="50" cy="50" r="45" />
+                    <circle id="timer-circle" class="timer-progress" cx="50" cy="50" r="45" />
+                    <text id="timer-text" x="50" y="55" text-anchor="middle">15</text>
+                </svg>
+            </div>
+            <div id="cities">
+                <p id="city1"></p>
+                <p id="city2"></p>
+                <p id="city3"></p>
+            </div>
+            <button onclick="endGame()" class="end-game-btn">End Game</button>
+            <p id="feedback"></p>
+        </div>
+        <div id="reveal-screen" style="display: none;">
+            <h2>Correct Answer:</h2>
+            <p id="correct-country"></p>
+        </div>
+        <div id="game-over-screen" style="display: none;">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="final-score"></span>/20</p>
+            <button onclick="restartGame()">Play Again</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff6f61, #ffb88c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    animation: fadeIn 1s ease-in;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+button {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: #e55a50;
+    transform: scale(1.05);
+}
+
+.score-round {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#cities p {
+    font-size: 1.3em;
+    margin: 10px 0;
+    color: #444;
+}
+
+.timer-container {
+    margin: 20px auto;
+}
+
+.timer {
+    transform: rotate(-90deg);
+}
+
+.timer-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 5;
+}
+
+.timer-progress {
+    fill: none;
+    stroke: #ff6f61;
+    stroke-width: 5;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear;
+}
+
+#timer-text {
+    font-size: 1.5em;
+    fill: #333;
+    transform: rotate(90deg) translate(0, -100px);
+    transform-origin: center;
+}
+
+.end-game-btn {
+    background: #e55a50;
+}
+
+.end-game-btn:hover {
+    background: #d1433a;
+}
+
+#feedback {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #e55a50;
+}
+
+#reveal-screen {
+    animation: fadeIn 1s ease-in;
+}
+
+#reveal-screen p {
+    font-size: 1.5em;
+    color: #ff6f61;
+    font-weight: bold;
+}
+
+#game-over-screen {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
