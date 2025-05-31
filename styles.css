@@ -48,6 +48,9 @@ button:hover {
     transform: scale(1.05);
 }
 
+.score {
+    color: white;
+}
 .score-round {
     display: flex;
     justify-content: space-between;

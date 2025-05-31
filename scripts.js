@@ -47,7 +47,7 @@ function nextRound() {
     document.getElementById("city3").textContent = cities[2];
 
     // Text-to-Speech: Read out the cities
-    const utterance = new SpeechSynthesisUtterance(`... ${cities[0]}, ${cities[1]}, and ${cities[2]}.`);
+    const utterance = new SpeechSynthesisUtterance(` ${cities[0]}, ${cities[1]}, and ${cities[2]}.`);
     utterance.lang = 'en-US'; // Set language to English (US)
     utterance.volume = 1; // Volume (0 to 1)
     utterance.rate = 0.8; // Speed (0.1 to 10)
